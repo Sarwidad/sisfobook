@@ -1,0 +1,21 @@
+import { defineConfig } from 'vite';
+import laravel from 'laravel-vite-plugin';
+
+export default defineConfig({
+    plugins: [
+        laravel({
+            input: [
+                'resources/views/layouts/css/sb-admin-2.min.css',
+                'resources/views/layouts/css/styles.css',
+                'resources/views/layouts/vendor/fontawesome-free/css/all.min.css',
+                'resources/views/layouts/js/sb-admin-2.min.js',
+                'resources/views/layouts/js/scripts.js',
+                'resources/js/app.js'
+            ],
+            refresh: true,
+            build: {
+                assetsInlineLimit: 0
+            }
+        }),
+    ],
+});
